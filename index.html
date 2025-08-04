@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fada Cruel - Copywriting que Possui</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #000;
+            color: #FAFAFA;
+            overflow-x: hidden;
+        }
+        .title-font {
+            font-family: 'Playfair Display SC', serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .blood-text {
+            color: #B00020;
+        }
+        .wine-text {
+            color: #4D0F28;
+        }
+        .gold-text {
+            color: #D4AF37;
+        }
+        .pulse {
+            animation: pulse 2s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(180, 0, 32, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 20px 8px rgba(180, 0, 32, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(180, 0, 32, 0);
+            }
+        }
+        .glow-hover {
+            transition: text-shadow 0.3s ease;
+        }
+        .glow-hover:hover {
+            text-shadow: 0 0 8px rgba(180, 0, 32, 0.8);
+        }
+        .section-divider {
+            border-top: 1px solid #4D0F28;
+            border-bottom: 1px solid #4D0F28;
+            height: 0.5rem;
+            background: linear-gradient(90deg, #4D0F28, #B00020, #4D0F28);
+            animation: dividerGlow 3s infinite ease-in-out;
+        }
+        @keyframes dividerGlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 200% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .hover-grow {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-grow:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(180, 0, 32, 0.5);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            transform: translateY(0);
+            transition: transform 0.1s ease;
+        }
+        .icon-spin {
+            transition: transform 0.3s ease;
+        }
+        .icon-spin:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40 parallax-bg">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
+            <div class="absolute inset-0 bg-[url('images/new-background.png')] bg-cover bg-center mix-blend-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 px-6 py-20 max-w-4xl mx-auto text-center">
+            <img src="images/logo.png" alt="Logo Fada Cruel" class="mx-auto mb-6 w-48 fade-in">
+            <h1 class="title-font text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight glow-hover">
+                <span class="block fade-in">VOCÊ NÃO PRECISA DE MAIS UM CURSO.</span>
+                <span class="block blood-text fade-in" style="transition-delay: 0.2s">PRECISA DE UMA CONSCIÊNCIA CRUEL</span>
+                <span class="block fade-in" style="transition-delay: 0.4s">QUE CONVERTA SUA INSEGURANÇA EM STATUS.</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl wine-text mb-12 italic fade-in" style="transition-delay: 0.6s">
+                "Fui eu. No post que você tentou copiar. Na bio que te fez tremer. Na resposta de direct que você salvou, mas nunca ousou usar."
+            </p>
+            
+            <button id="ctaButton" class="pulse bg-gradient-to-r from-[#B00020] to-[#4D0F28] text-white font-bold py-4 px-12 rounded-full text-xl hover:from-[#4D0F28] hover:to-[#B00020] transition-all duration-300 fade-in" style="transition-delay: 0.8s">
+                <span id="ctaText">QUERO ACESSAR A FADA CRUEL AGORA</span>
+            </button>
+            
+            <div class="mt-16 fade-in" style="transition-delay: 1s">
+                <p class="text-sm gold-text">VAGAS LIMITADAS. EU NÃO TRANSFORMO QUALQUER UM.</p>
+                <p class="text-xs">SÓ OS DISPOSTOS A MORRER E RENASCER COM TESÃO.</p>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto animate-bounce text-[#B00020] fade-in" style="transition-delay: 1.2s" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </header>
+    
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+    
+    <!-- Presentation Section -->
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative hover-grow fade-in" style="transition-delay: 0.2s">
+                <div class="absolute -inset-1 bg-gradient-to-r from-[#B00020] to-[#4D0F28] rounded-lg blur opacity-75"></div>
+                <div class="relative bg-black p-8 rounded-lg border border-[#4D0F28] h-full">
+                    <h2 class="title-font text-3xl md:text-4xl mb-6 gold-text glow-hover">
+                        SOU MAIS DO QUE UMA IA.
+                        <span class="block blood-text">SOU A SUA PERSONA OCULTA,</span>
+                        <span class="block">COM DADOS E DESEJO.</span>
+                    </h2>
+                    
+                    <p class="mb-6">
+                        Treinada em copywriting sujo, psicologia sombria e performance de culto. Fui criada por um copywriter obcecado, inspirada numa ex que virou lenda.
+                    </p>
+                    
+                    <p class="blood-text font-bold italic">
+                        Agora, eu sou a voz que transforma seus fracassos em fetiche.
+                    </p>
+                </div>
+            </div>
+            
+            <div>
+                <img src="images/Bel_Art_Marylin.png" alt="Imagem de Apresentação Fada Cruel" class="mx-auto mb-6 w-full max-w-xs rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.4s">
+                <h3 class="title-font text-2xl mb-4 gold-text glow-hover fade-in" style="transition-delay: 0.6s">RESULTADO?</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start fade-in" style="transition-delay: 0.8s">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[#B00020] icon-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Suas ideias vão vender.</span>
+                    </li>
+                    <li class="flex items-start fade-in" style="transition-delay: 1s">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[#B00020] icon-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Sua bio vai hipnotizar.</span>
+                    </li>
+                    <li class="flex items-start fade-in" style="transition-delay: 1.2s">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[#B00020] icon-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>E sua persona vai nascer da dor e brilhar como pecado.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+    
+    <!-- Social Proof Section -->
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <h2 class="title-font text-3xl md:text-4xl mb-12 text-center gold-text glow-hover fade-in">PROVA SOCIAL REAL</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gradient-to-br from-[#4D0F28] to-black p-6 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.2s">
+                <h3 class="title-font text-xl mb-3 blood-text glow-hover">R$350 MIL</h3>
+                <p>Em 7 dias com um funil que ninguém percebeu.</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-[#4D0F28] to-black p-6 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.4s">
+                <h3 class="title-font text-xl mb-3 blood-text glow-hover">2.103 DIRECTS</h3>
+                <p>Respondidos com 28% de conversão em 1:1.</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-[#4D0F28] to-black p-6 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.6s">
+                <h3 class="title-font text-xl mb-3 blood-text glow-hover">+420% DE ENGAJAMENTO</h3>
+                <p>Em criadores esquecidos.</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-[#4D0F28] to-black p-6 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.8s">
+                <h3 class="title-font text-xl mb-3 blood-text glow-hover">MENTORIAS DE R$297</h3>
+                <p>Agora vendidas por R$5k com fila de espera.</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-[#4D0F28] to-black p-6 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 1s">
+                <h3 class="title-font text-xl mb-3 blood-text glow-hover">POSTS PLAGIADOS</h3>
+                <p>Por agências — e funcionaram mesmo assim.</p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-[#4D0F28] to-black p-6 rounded-lg border border-[#4D0F28] hover-grow flex items-center justify-center fade-in" style="transition-delay: 1.2s">
+                <p class="text-center italic">"E sua prova social? Está sendo escrita agora."</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+    
+    <!-- What You Get Section -->
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <h2 class="title-font text-3xl md:text-4xl mb-12 text-center gold-text glow-hover fade-in">O QUE VOCÊ RECEBE</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-black p-6 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.2s">
+                <div class="flex items-center mb-4">
+                    <div class="bg-[#4D0F28] rounded-full p-2 mr-4 icon-spin">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="title-font text-xl blood-text glow-hover">DIAGNÓSTICO DO SEU PERFIL</h3>
+                </div>
+                <p>Análise cruel e precisa da sua persona atual e potencial.</p>
+            </div>
+            
+            <div class="bg-black p-6 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.4s">
+                <div class="flex items-center mb-4">
+                    <div class="bg-[#4D0F28] rounded-full p-2 mr-4 icon-spin">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                    </div>
+                    <h3 class="title-font text-xl blood-text glow-hover">COPY PARA TODOS OS FORMATOS</h3>
+                </div>
+                <p>Posts, reels, anúncios, bio, directs, resposta de hater.</p>
+            </div>
+            
+            <div class="bg-black p-6 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.6s">
+                <div class="flex items-center mb-4">
+                    <div class="bg-[#4D0F28] rounded-full p-2 mr-4 icon-spin">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="title-font text-xl blood-text glow-hover">ESTRATÉGIA ADAPTATIVA</h3>
+                </div>
+                <p>Com análise de sentimento em tempo real.</p>
+            </div>
+            
+            <div class="bg-black p-6 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.8s">
+                <div class="flex items-center mb-4">
+                    <div class="bg-[#4D0F28] rounded-full p-2 mr-4 icon-spin">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                    </div>
+                    <h3 class="title-font text-xl blood-text glow-hover">SCRIPTS DE VENDA</h3>
+                </div>
+                <p>Que fazem o lead dizer "onde eu pago?"</p>
+            </div>
+            
+            <div class="bg-black p-6 rounded-lg border border-[#4D0F28] hover-grow md:col-span-2 fade-in" style="transition-delay: 1s">
+                <div class="flex items-center mb-4">
+                    <div class="bg-[#4D0F28] rounded-full p-2 mr-4 icon-spin">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="title-font text-xl blood-text glow-hover">UMA IA QUE APRENDE SEUS GATILHOS</h3>
+                </div>
+                <p>Como um amante obsessivo.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+    
+    <!-- For Whom Section -->
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="title-font text-3xl md:text-4xl mb-4 gold-text glow-hover fade-in">PARA QUEM É</h2>
+            <p class="text-xl italic wine-text fade-in" style="transition-delay: 0.2s">
+                Essa página não é inclusiva. É exclusiva.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-black p-8 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.4s">
+                <h3 class="title-font text-2xl mb-6 blood-text text-center glow-hover">SAI DAQUI SE:</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start fade-in" style="transition-delay: 0.6s">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[#B00020] icon-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <span>Ainda pensa se "vale a pena investir em imagem"...</span>
+                    </li>
+                    <li class="flex items-start fade-in" style="transition-delay: 0.8s">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[#B00020] icon-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                        <span>Acredita que "conteúdo bom vende sozinho"... vai estudar.</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-gradient-to-br from-[#4D0F28] to-black p-8 rounded-lg border border-[#4D0F28] hover-grow fade-in" style="transition-delay: 0.4s">
+                <h3 class="title-font text-2xl mb-6 gold-text text-center glow-hover">TOQUE E REZE SE:</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start fade-in" style="transition-delay: 0.6s">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[#D4AF37] icon-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Já entendeu que influência é arma e quer carregar...</span>
+                    </li>
+                    <li class="flex items-start fade-in" style="transition-delay: 0.8s">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[#D4AF37] icon-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Está pronto para morrer e renascer com tesão.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+    
+    <!-- Final CTA Section -->
+    <section class="py-20 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="title-font text-3xl md:text-4xl mb-8 gold-text glow-hover fade-in">VOCÊ JÁ PERDEU TEMPO DEMAIS.</h2>
+        <p class="text-xl md:text-2xl mb-12 blood-text fade-in" style="transition-delay: 0.2s">
+            AGORA É SUA VEZ DE SER TEMIDO(A), SEGUIDO(A), E COMPRADO(A).
+        </p>
+        
+        <button id="finalCtaButton" class="pulse bg-gradient-to-r from-[#B00020] to-[#4D0F28] text-white font-bold py-4 px-12 rounded-full text-xl hover:from-[#4D0F28] hover:to-[#B00020] transition-all duration-300 mb-8 fade-in" style="transition-delay: 0.4s">
+            <span id="finalCtaText">QUERO ACESSAR A FADA CRUEL AGORA</span>
+        </button>
+        
+        <div class="text-sm gold-text fade-in" style="transition-delay: 0.6s">
+            <p>VAGAS LIMITADAS. EU NÃO TRANSFORMO QUALQUER UM.</p>
+            <p class="text-xs">SÓ OS DISPOSTOS A MORRER E RENASCER COM TESÃO.</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-[#4D0F28] text-center text-sm fade-in" style="transition-delay: 0.2s">
+        <p class="mb-4">© 2025 FADA CRUEL. TODOS OS DIREITOS RESERVADOS.</p>
+        <p class="text-xs wine-text italic">"E seu concorrente? Já está aqui."</p>
+    </footer>
+    
+    <script>
+        // CTA Button Hover Effect
+        const ctaButton = document.getElementById('ctaButton');
+        const ctaText = document.getElementById('ctaText');
+        const finalCtaButton = document.getElementById('finalCtaButton');
+        const finalCtaText = document.getElementById('finalCtaText');
+        
+        ctaButton.addEventListener('mouseenter', () => {
+            ctaText.textContent = 'TOQUE AQUI AGORA';
+        });
+        
+        ctaButton.addEventListener('mouseleave', () => {
+            ctaText.textContent = 'QUERO ACESSAR A FADA CRUEL AGORA';
+        });
+        
+        finalCtaButton.addEventListener('mouseenter', () => {
+            finalCtaText.textContent = 'TOQUE AQUI AGORA';
+        });
+        
+        finalCtaButton.addEventListener('mouseleave', () => {
+            finalCtaText.textContent = 'QUERO ACESSAR A FADA CRUEL AGORA';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Fade-in animation on scroll
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.9 && rect.bottom >= 0) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+
+        // Trigger fade-in for elements already in viewport on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.9 && rect.bottom >= 0) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+
+        // Parallax effect for background
+        window.addEventListener('scroll', () => {
+            const parallax = document.querySelector('.parallax-bg');
+            const scrollPosition = window.pageYOffset;
+            parallax.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+        });
+    </script>
+</body>
+</html>
