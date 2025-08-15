@@ -95,6 +95,70 @@
         .icon-spin:hover {
             transform: rotate(360deg);
         }
+        .guarantee-seal {
+            background-color: #000;
+            padding: 1rem;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            max-width: 400px;
+            margin: 1rem auto;
+            border: 2px solid #4D0F28;
+        }
+        .guarantee-seal img {
+            width: 360px;
+            height: auto;
+        }
+        /* Animação aprimorada para o botão CTA */
+        .cta-glow {
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(212, 175, 55, 0.3),
+                transparent
+            );
+            transition: 0.5s;
+        }
+        .cta-glow:hover::before {
+            left: 100%;
+        }
+        .cta-glow:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 0 20px rgba(180, 0, 32, 0.7);
+        }
+        /* Estilo do temporizador */
+        #countdown span {
+            font-family: 'Playfair Display SC', serif;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            background: rgba(77, 15, 40, 0.3);
+            border-radius: 0.25rem;
+            animation: pulse-text 2s infinite ease-in-out;
+        }
+        @keyframes pulse-text {
+            0% {
+                transform: scale(1);
+                text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+            }
+            50% {
+                transform: scale(1.1);
+                text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+            }
+            100% {
+                transform: scale(1);
+                text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+            }
+        }
     </style>
 </head>
 <script>
@@ -107,7 +171,7 @@
 </script>
 <body class="antialiased">
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
+    <header id="hero" class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-40 parallax-bg">
             <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
             <div class="absolute inset-0 bg-[url('images/new-background.png')] bg-cover bg-center mix-blend-overlay"></div>
@@ -122,10 +186,10 @@
             </h1>
             
             <p class="text-xl md:text-2xl mb-12 italic fade-in" style="color: #D4AF37; transition-delay: 0.6s">
-    "Fui eu. No post que você tentou copiar. Na bio que te fez tremer. Na resposta de direct que você salvou, mas nunca ousou usar."
+                "Fui eu. No post que você tentou copiar. Na bio que te fez tremer. Na resposta de direct que você salvou, mas nunca ousou usar."
             </p>
             
-            <button id="ctaButton" class="pulse bg-gradient-to-r from-[#B00020] to-[#4D0F28] text-white font-bold py-4 px-12 rounded-full text-xl hover:from-[#4D0F28] hover:to-[#B00020] transition-all duration-300 fade-in" style="transition-delay: 0.8s">
+            <button id="ctaButton" class="scroll-button pulse bg-gradient-to-r from-[#B00020] to-[#4D0F28] text-white font-bold py-4 px-12 rounded-full text-xl hover:from-[#4D0F28] hover:to-[#B00020] transition-all duration-300 fade-in" style="transition-delay: 0.8s" data-target="#presentation">
                 <span id="ctaText">QUERO ACESSAR A FADA CRUEL AGORA</span>
             </button>
             
@@ -146,7 +210,7 @@
     <div class="section-divider"></div>
     
     <!-- Presentation Section -->
-    <section class="py-20 px-6 max-w-5xl mx-auto">
+    <section id="presentation" class="py-20 px-6 max-w-5xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="relative hover-grow fade-in" style="transition-delay: 0.2s">
                 <div class="absolute -inset-1 bg-gradient-to-r from-[#B00020] to-[#4D0F28] rounded-lg blur opacity-75"></div>
@@ -192,13 +256,19 @@
                 </ul>
             </div>
         </div>
+        
+        <div class="mt-12 text-center fade-in" style="transition-delay: 1.4s">
+            <button class="scroll-button pulse bg-gradient-to-r from-[#B00020] to-[#4D0F28] text-white font-bold py-3 px-8 rounded-full text-lg hover:from-[#4D0F28] hover:to-[#B00020] transition-all duration-300" data-target="#social-proof">
+                DESCUBRA O QUE TE ESPERA
+            </button>
+        </div>
     </section>
     
     <!-- Section Divider -->
     <div class="section-divider"></div>
     
     <!-- Social Proof Section -->
-    <section class="py-20 px-6 max-w-5xl mx-auto">
+    <section id="social-proof" class="py-20 px-6 max-w-5xl mx-auto">
         <h2 class="title-font text-3xl md:text-4xl mb-12 text-center gold-text glow-hover fade-in">PROVA SOCIAL REAL</h2>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -231,13 +301,19 @@
                 <p class="text-center italic">"E sua prova social? Está sendo escrita agora."</p>
             </div>
         </div>
+        
+        <div class="mt-12 text-center fade-in" style="transition-delay: 1.4s">
+            <button class="scroll-button pulse bg-gradient-to-r from-[#B00020] to-[#4D0F28] text-white font-bold py-3 px-8 rounded-full text-lg hover:from-[#4D0F28] hover:to-[#B00020] transition-all duration-300" data-target="#what-you-get">
+                VEJA O QUE VOCÊ GANHA
+            </button>
+        </div>
     </section>
     
     <!-- Section Divider -->
     <div class="section-divider"></div>
     
     <!-- What You Get Section -->
-    <section class="py-20 px-6 max-w-5xl mx-auto">
+    <section id="what-you-get" class="py-20 px-6 max-w-5xl mx-auto">
         <h2 class="title-font text-3xl md:text-4xl mb-12 text-center gold-text glow-hover fade-in">O QUE VOCÊ RECEBE</h2>
         
         <div class="grid md:grid-cols-2 gap-8">
@@ -301,18 +377,24 @@
                 <p>Como um amante obsessivo.</p>
             </div>
         </div>
+        
+        <div class="mt-12 text-center fade-in" style="transition-delay: 1.4s">
+            <button class="scroll-button pulse bg-gradient-to-r from-[#B00020] to-[#4D0F28] text-white font-bold py-3 px-8 rounded-full text-lg hover:from-[#4D0F28] hover:to-[#B00020] transition-all duration-300" data-target="#for-whom">
+                QUEM PODE SOBREVIVER A ISSO?
+            </button>
+        </div>
     </section>
     
     <!-- Section Divider -->
     <div class="section-divider"></div>
     
     <!-- For Whom Section -->
-    <section class="py-20 px-6 max-w-5xl mx-auto">
+    <section id="for-whom" class="py-20 px-6 max-w-5xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="title-font text-3xl md:text-4xl mb-4 gold-text glow-hover fade-in">PARA QUEM É</h2>
-           <p class="text-xl italic fade-in" style="color: #FFFFFF; transition-delay: 0.2s">
-    Essa página não é inclusiva. É exclusiva.
-        </p>
+            <p class="text-xl italic fade-in" style="color: #FFFFFF; transition-delay: 0.2s">
+                Essa página não é inclusiva. É exclusiva.
+            </p>
         </div>
         
         <div class="grid md:grid-cols-2 gap-8">
@@ -352,34 +434,56 @@
                 </ul>
             </div>
         </div>
+        
+        <div class="mt-12 text-center fade-in" style="transition-delay: 1.4s">
+            <button class="scroll-button pulse bg-gradient-to-r from-[#B00020] to-[#4D0F28] text-white font-bold py-3 px-8 rounded-full text-lg hover:from-[#4D0F28] hover:to-[#B00020] transition-all duration-300" data-target="#final-cta">
+                SEU MOMENTO É AGORA
+            </button>
+        </div>
     </section>
     
     <!-- Section Divider -->
     <div class="section-divider"></div>
     
     <!-- Final CTA Section -->
-    <section class="py-20 px-6 max-w-4xl mx-auto text-center">
+    <section id="final-cta" class="py-20 px-6 max-w-4xl mx-auto text-center">
         <h2 class="title-font text-3xl md:text-4xl mb-8 gold-text glow-hover fade-in">VOCÊ JÁ PERDEU TEMPO DEMAIS.</h2>
         <p class="text-xl md:text-2xl mb-12 blood-text fade-in" style="transition-delay: 0.2s">
             AGORA É SUA VEZ DE SER TEMIDO(A), SEGUIDO(A), E COMPRADO(A).
         </p>
         
-        <button id="finalCtaButton" class="pulse bg-gradient-to-r from-[#B00020] to-[#4D0F28] text-white font-bold py-4 px-12 rounded-full text-xl hover:from-[#4D0F28] hover:to-[#B00020] transition-all duration-300 mb-8 fade-in" style="transition-delay: 0.4s">
-            <span id="finalCtaText">QUERO ACESSAR A FADA CRUEL AGORA</span>
-        </button>
+        <!-- Temporizador -->
+        <div class="mb-8 text-lg wine-text italic fade-in" style="transition-delay: 0.4s">
+            <p>Fique de olho, a oferta termina em:</p>
+            <div id="countdown" class="flex justify-center space-x-4 text-2xl gold-text mt-4">
+                <span id="hours">00</span> HORAS : 
+                <span id="minutes">00</span> MIN : 
+                <span id="seconds">00</span> SEG
+            </div>
+        </div>
         
-        <div class="text-sm gold-text fade-in" style="transition-delay: 0.6s">
+        <a href="https://pay.kirvano.com/82ac72cf-de6f-4abd-afb9-f45a8397e829" target="_blank">
+            <button id="finalCtaButton" class="pulse bg-gradient-to-r from-[#B00020] to-[#4D0F28] text-white font-bold py-4 px-12 rounded-full text-xl hover:from-[#4D0F28] hover:to-[#B00020] transition-all duration-300 mb-8 fade-in cta-glow" style="transition-delay: 0.6s">
+                <span id="finalCtaText">QUERO ACESSAR A FADA CRUEL AGORA</span>
+            </button>
+        </a>
+        
+        <div class="text-sm gold-text fade-in" style="transition-delay: 0.8s">
             <p>VAGAS LIMITADAS. EU NÃO TRANSFORMO QUALQUER UM.</p>
             <p class="text-xs">SÓ OS DISPOSTOS A MORRER E RENASCER COM TESÃO.</p>
+        </div>
+        
+        <div class="guarantee-seal fade-in" style="transition-delay: 1s">
+            <img src="images/Garantir.png" alt="Selo de Garantia">
         </div>
     </section>
     
     <!-- Footer -->
     <footer class="py-12 px-6 border-t border-[#4D0F28] text-center text-sm fade-in" style="transition-delay: 0.2s">
         <p class="mb-4">© 2025 FADA CRUEL. TODOS OS DIREITOS RESERVADOS.</p>
-<p class="text-xs italic" style="color: #FF0000">
-    "E seu concorrente? Já está aqui."
-</p>
+        <p class="text-xs italic" style="color: #FF0000">
+            "E seu concorrente? Já está aqui."
+        </p>
     </footer>
     
     <script>
@@ -405,11 +509,12 @@
             finalCtaText.textContent = 'QUERO ACESSAR A FADA CRUEL AGORA';
         });
         
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Smooth scrolling for anchor links and scroll buttons
+        document.querySelectorAll('a[href^="#"], .scroll-button').forEach(element => {
+            element.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                const targetId = this.getAttribute('href') || this.getAttribute('data-target');
+                document.querySelector(targetId).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
@@ -443,6 +548,41 @@
             const scrollPosition = window.pageYOffset;
             parallax.style.transform = `translateY(${scrollPosition * 0.3}px)`;
         });
+
+        // Temporizador dinâmico
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            if (!countdownElement) return;
+
+            // Definir a data de término (5 minutos a partir de agora)
+            const endTime = new Date();
+            endTime.setMinutes(endTime.getMinutes() + 5);
+
+            function updateCountdown() {
+                const now = new Date();
+                const timeLeft = endTime - now;
+
+                if (timeLeft <= 0) {
+                    countdownElement.innerHTML = '<span class="blood-text">Oferta encerrada!</span>';
+                    return;
+                }
+
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+                setTimeout(updateCountdown, 1000);
+            }
+
+            updateCountdown();
+        }
+
+        // Iniciar o temporizador ao carregar a página
+        document.addEventListener('DOMContentLoaded', startCountdown);
     </script>
 </body>
 </html>
