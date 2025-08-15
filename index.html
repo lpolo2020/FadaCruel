@@ -140,8 +140,8 @@
         #countdown span {
             font-family: 'Playfair Display SC', serif;
             font-weight: 700;
+            color: #FFFFFF;
             padding: 0.5rem 1rem;
-            background: rgba(77, 15, 40, 0.3);
             border-radius: 0.25rem;
             animation: pulse-text 2s infinite ease-in-out;
         }
@@ -452,10 +452,10 @@
             AGORA É SUA VEZ DE SER TEMIDO(A), SEGUIDO(A), E COMPRADO(A).
         </p>
         
-        <!-- Temporizador -->
-        <div class="mb-8 text-lg wine-text italic fade-in" style="transition-delay: 0.4s">
-            <p>Fique de olho, a oferta termina em:</p>
-            <div id="countdown" class="flex justify-center space-x-4 text-2xl gold-text mt-4">
+        <!-- Temporizador com preço -->
+        <div class="mb-8 text-lg text-white italic fade-in" style="transition-delay: 0.4s">
+            <p>Fique de olho, a oferta de <span class="gold-text title-font text-3xl pulse-text">R$347,00</span> termina em:</p>
+            <div id="countdown" class="flex justify-center space-x-4 text-2xl text-white mt-4">
                 <span id="hours">00</span> HORAS : 
                 <span id="minutes">00</span> MIN : 
                 <span id="seconds">00</span> SEG
